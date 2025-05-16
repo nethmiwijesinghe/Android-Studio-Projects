@@ -1,20 +1,41 @@
 package com.example.example1relative
 
+
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.widget.Button
+import android.widget.EditText
+import android.widget.RadioButton
+import android.widget.RadioGroup
+import android.widget.Toast
+
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        val name = findViewById<EditText>(R.id.editName)
+        val email = findViewById<EditText>(R.id.editEmail)
+        val phone = findViewById<EditText>(R.id.editPhone)
+        val dob = findViewById<EditText>(R.id.editDob)
+        val genderGroup = findViewById<RadioGroup>(R.id.editgenderGroup)
+        val submitBtn = findViewById<Button>(R.id.btnSubmit)
+
+        submitBtn.setOnClickListener{
+            val selectedGenderId = genderGroup.checkedRadioButtonId
+            val gender = findViewById<RadioButton>(selectedGenderId)?.text ?: "Not Selected"
+
+            val messages = """
+                Name:${name.text}
+                Email:${email.text}
+                Phone:${phone.text}
+                DOB:${dob.text}
+                """.trimIndent()
+            Toast.makeText(this,messages,Toast.LENGTH_LONG).show()
+
+
         }
     }
 }
