@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="16dp"
+    >
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student Registation"
+        android:textSize="24dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/title"/>
+
+    <EditText
+        android:id="@+id/editName"
+        android:hint="Full Name"
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:id="@+id/editEmail"
+        android:hint="Email Address"
+        android:inputType="textEmailAddress"
+        android:layout_below="@+id/editName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:id="@+id/editPhone"
+        android:hint="Phone Number"
+        android:inputType="phone"
+        android:layout_below="@+id/editEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:id="@+id/editDob"
+        android:hint="Date Of Birth"
+        android:inputType="date"
+        android:layout_below="@+id/editPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" />
+
+    <RadioGroup
+        android:id="@+id/editgenderGroup"
+        android:inputType="date"
+        android:layout_below="@+id/editDob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <RadioButton android:id="@+id/radioMale" android:text="Male"/>
+        <RadioButton android:id="@+id/radioFemale" android:text="Female"/>
+
+    </RadioGroup>
+
+    <Button
+        android:text="Submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSubmit"
+        android:layout_below="@+id/editgenderGroup"
+        android:layout_marginTop="20dp"
+        />
+
+    </RelativeLayout>
+
