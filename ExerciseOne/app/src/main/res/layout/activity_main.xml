@@ -7,7 +7,8 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#D2F7FD">
 
     <TextView
         android:id="@+id/textTitle"
@@ -15,39 +16,40 @@
         android:layout_height="wrap_content"
         android:text="Select Your Hobbies"
         android:textSize="16sp"
-        android:layout_marginBottom="10dp"/>
+        />
 
     <CheckBox
-        android:id="@+id/chechBoxReading"
+        android:id="@+id/checkBoxReading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Reading"
         />
     <CheckBox
-        android:id="@+id/chechBoxTravelling"
+        android:id="@+id/checkBoxTravelling"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Travelling"
         />
     <CheckBox
-        android:id="@+id/chechBoxGaming"
+        android:id="@+id/checkBoxGaming"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Gaming"
         />
     <CheckBox
-        android:id="@+id/chechBoxCokking"
+        android:id="@+id/checkBoxCooking"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cooking"
         />
 
     <Button
-        android:id="@+id/buttonShowSelection"
+        android:id="@+id/btnShowSelection"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Show SElected Hobbies"
+        android:text="Show Selected Hobbies"
         android:layout_marginTop="20dp"
+        android:backgroundTint="#009999"
         />
 
     <TextView
