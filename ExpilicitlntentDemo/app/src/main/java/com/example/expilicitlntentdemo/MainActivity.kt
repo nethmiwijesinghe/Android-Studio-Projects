@@ -14,13 +14,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // Get references to the EditText and Button from the layout
         val editText = findViewById<EditText>(R.id.editTextName)
         val button = findViewById<Button>(R.id.buttonSend)
 
+        // Set a click listener on the button
         button.setOnClickListener{
+            // Get the text entered by the user
             val name = editText.text.toString()
+            // Create an explicit intent to start SecondActivity
             val intent = Intent(this,SecondActivity::class.java)
+            // Pass the user's name to SecondActivity using intent extras
             intent.putExtra("user_name",name)
+            // Start SecondActivity
             startActivity(intent)
         }
     }
