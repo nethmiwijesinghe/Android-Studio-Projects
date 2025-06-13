@@ -47,6 +47,9 @@ class EmployeeDbHelper(context:Context) :
                 val email = cursor.getString(2)
                 builder.append("ID: $id\n, Name: $name\n, Email: $email\n")
             } while (cursor.moveToNext())
+        }else
+        {
+            builder.append("No record found.")
         }
         cursor.close()
         return builder.toString()
