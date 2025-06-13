@@ -54,4 +54,9 @@ class EmployeeDbHelper(context:Context) :
         cursor.close()
         return builder.toString()
     }
+    fun deleteEmployee(id: Int): Boolean {
+        val db = writableDatabase
+        val result = db.delete("Employee", "id=?", arrayOf(id.toString()))
+        return result > 0
+    }
 }
